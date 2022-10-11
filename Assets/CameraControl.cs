@@ -5,7 +5,12 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     //Create a public reference to the player - we will assign this using the Unity editor
-    public GameObject player; 
+    GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
 
     void Update()
     {
